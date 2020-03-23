@@ -13,8 +13,8 @@ export default function Header() {
             </div>
             <div className="social-links">
                 <a href="http://facebook.com/sourav.rakshit.1234" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
-                <a href="http://facebook.com/sourav.rakshit.1234" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
-                <a href="http://facebook.com/sourav.rakshit.1234" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
+                <a href="http://github.com/souravrax" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/souravrax/" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
             </div>
         </div>
     )

@@ -74,19 +74,6 @@
   filter: blur(25px);
 }
 
-@keyframes animate-back {
-  0%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-}
-
-
-
-
 @media only screen and (max-width: 700px){
   .header{
     display: none;

@@ -22,24 +22,41 @@ img {
   width: 60%;
 
   .tag {
-    cursor: pointer;
-    margin: 10px 0px;
-    padding: 5px 20px;
-    color: white;
+    margin: 10px auto;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    width: 95%;
+    height: 32px;
     position: relative;
-    background: #8e2de2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #4a00e0,
-      #8e2de2
-    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: #8e2de2;
     background: linear-gradient(to right, #4a00e0, #8e2de2);
     border-radius: 20px;
     transition: all 600ms ease-in-out;
-    &:hover {
-      box-shadow: 3px 3px 10px #4b00e0ab, -3px 3px 10px #8e2de2ab;
+    p {
+      display: inline-block;
+      color: #fff;
+      overflow: hidden;
+      border-right: 0.15em solid orange; 
+      white-space: nowrap; 
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(50, end) infinite, blink-caret 0.5s step-end infinite;
     }
   }
+
+
+  
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
 
   .description {
     text-align: center;
@@ -64,13 +81,13 @@ img {
   }
 }
 
-@keyframes dropup{
-  0%, 100%{
+@keyframes dropup {
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50%{
+  50% {
     transform: translateY(5px);
-
   }
 }
 

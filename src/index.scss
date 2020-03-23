@@ -19,3 +19,28 @@ body {
 .link {
   text-decoration: none;
 }
+
+.title {
+  font-size: 14rem;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+  font-weight: 900;
+  color: rgb(12, 12, 12);
+}
+
+@keyframes animate-back {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.success{
+  color: rgb(51, 255, 24);
+}

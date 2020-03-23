@@ -23,7 +23,7 @@ export default class HomePage extends Component {
                 </Liquid>
                 <div className="details">
                     <h1>Hi, I'm Sourav Rakshit <span role="img" aria-labelledby="wave">👋</span></h1>
-                    <p className="tag">Javascript/Typescript Developer (Pursuing B.Tech)</p>
+                    <div className="tag"><p>Full Stack Web Developer</p></div>
                     <p className="description">Love to make and break things</p>
                 </div>
                 <div className="resume">
