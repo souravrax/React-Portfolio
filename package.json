@@ -1,5 +1,6 @@
 {
   "name": "souravrax.github.io",
+  "homepage": "https://souravrax.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,12 +20,17 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ssr" : "nodemon server/index.js"
+    "ssr": "nodemon server/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
