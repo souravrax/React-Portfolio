@@ -49,6 +49,7 @@ export default class ContactPage extends Component {
                         display: "none"
                     }}>Your message is sent successfully</p>
                 </form>
+
             </div>
         )
     }

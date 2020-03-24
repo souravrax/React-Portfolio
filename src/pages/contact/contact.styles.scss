@@ -3,6 +3,9 @@
   height: 100%;
   position: relative;
   padding: 5%;
+  display: flex;
+  // justify-content: center;
+  align-items: flex-start;
 }
 
 .form-input {
@@ -44,4 +47,12 @@
         filter: blur(2px);
     }
   }
+
+}
+
+
+.file{
+  border: 1px solid gray;
+  background: #fff;
+  width: 100px;
 }

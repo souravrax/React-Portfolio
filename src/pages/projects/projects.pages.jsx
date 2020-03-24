@@ -19,9 +19,9 @@ export default class ProjectsPage extends React.Component {
                     Projects.map(elem => (
                         <Liquid d="250px" border="border" margin="20px">
                             <div className="project" >
-                                <h1>{elem.name}</h1>5
+                                <h1>{elem.name}</h1>
                             <p>{elem.description}</p>
-                                <a className="link" href={`${elem.project_link}`}>Know More</a>
+                                <a className="link" target="_blank" rel="noopener noreferrer" href={`${elem.project_link}`}>Know More</a>
                             </div>
                         </Liquid>
                     ))

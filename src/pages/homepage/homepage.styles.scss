@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 .home-page {
   height: 100%;
   padding: 100px 0px;
@@ -21,52 +22,40 @@ img {
   margin-top: 40px;
   width: 60%;
 
-  .tag {
-    margin: 10px auto;
-    padding: 5px 10px;
-    color: rgb(255, 255, 255);
-    width: 95%;
-    height: 32px;
-    position: relative;
-    background: #8e2de2;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
-    border-radius: 20px;
-    transition: all 600ms ease-in-out;
-    p {
-      display: inline-block;
-      color: #fff;
-      overflow: hidden;
-      border-right: 0.15em solid orange; 
-      white-space: nowrap; 
-      margin: 0 auto;
-      letter-spacing: 0.15em;
-      animation: typing 3.5s steps(50, end) infinite, blink-caret 0.5s step-end infinite;
+  h1 {
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    user-select: none;
+  }
+
+  .react-rotating-text-cursor {
+    animation: blinking-cursor 0.5s steps(30) infinite;
+    font-size: 1.9rem;
+    color: orange;
+  }
+
+  @keyframes blinking-cursor {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 
-
-  
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
   .description {
-    text-align: center;
-    line-height: 20px;
+    // line-height: 20px;
+    font-size: 1.2rem;
+    opacity: 0.7;
   }
 }
 
 .resume {
-  height: 45px;
-  width: 45px;
+  height: 49px;
+  width: 49px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -99,4 +88,15 @@ img {
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .home-page{
+    h1{
+      // font-size: 1.4rem;
+    }
+    .description{
+      font-size: 0.8rem;
+    }
+  }
 }
