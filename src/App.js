@@ -7,8 +7,12 @@ import AboutPage from './pages/about/about.pages';
 import ProjectsPage from './pages/projects/projects.pages';
 import ContactPage from './pages/contact/contact.pages';
 
-function App() {
-  return (
+class App extends React.Component {
+  componentWillMount = () => {
+    console.log('%c ', 'font-size:400px; background:url(https://pics.me.me/codeit-google-until-youfinda-stackoverflow-answerwith-code-to-copy-paste-34126823.png) no-repeat;');
+  }
+  render() {
+    return (
       <div className="App">
         <Header />
         <div className="section">
@@ -20,7 +24,8 @@ function App() {
           </Switch>
         </div>
       </div>
-  );
+    );
+  }
 }
 
 export default App;

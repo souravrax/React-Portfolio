@@ -38,7 +38,7 @@ export default class HomePage extends Component {
                 </div>
                 <div className="resume">
                     <Liquid d="51px" border="border">
-                        <a title="Download resume" href="https://facebook.com/sourav.rakshit.1234" alt="Click to download"><i className="fa fa-arrow-down"></i></a>
+                        <a title="Download resume" href="https://souravrax-github-io-backend.herokuapp.com/resume" rel="noopener noreferrer" target='_blank' alt="Click to download"><i className="fa fa-arrow-down"></i></a>
                     </Liquid>
                 </div>
             </div >
