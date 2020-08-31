@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './contact.styles.scss';
+import axios from 'axios';
 
 
 export default class ContactPage extends Component {
@@ -8,12 +9,38 @@ export default class ContactPage extends Component {
         this.state = {
             name: "",
             email: "",
-            message: ""
+            message: "",
+            response: {},
         }
     }
 
-    submitMessage() {
-
+    submitMessage = (event) => {
+        event.preventDefault();
+        let isValidEmail = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/.test(this.state.email);
+        this.setState({
+            submitting: true
+        })
+        if (isValidEmail) {
+            axios.post('https://souravrax-github-io-backend.herokuapp.com/send_message', {
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message
+            })
+                .then(response => {
+                    this.setState({
+                        response: response.data,
+                        submitting: false
+                    })
+                    console.log(this.state.response);
+                    console.log(`The message is sent successfully with id : ${this.state.response.data.message_id}`);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
+        else {
+            console.log("Enter a valid email address");
+        }
     }
 
     checkFilledOrNot() {
@@ -46,8 +73,10 @@ export default class ContactPage extends Component {
                         Submit
                     </button>
                     <p className="success" style={{
-                        display: "none"
-                    }}>Your message is sent successfully</p>
+                        display : "block"
+                    }}>
+                        {this.state.response.successful ? `Message is sent with message id : ${this.state.response.data.message_id}` : ""}
+                    </p>
                 </form>
 
             </div>
